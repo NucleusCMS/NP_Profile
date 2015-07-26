@@ -895,6 +895,3 @@ else {
     }
 	echo "</div>\n";
 	$oPluginAdmin->end();
-
-
-?>

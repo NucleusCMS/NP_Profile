@@ -3632,4 +3632,3 @@ password
 		return $thumb;
 	}
 }
-?>

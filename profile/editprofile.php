@@ -241,4 +241,3 @@ echo "<div class=\"returnlink\">\n";
 echo "<a href=\"$returnURL\" title=\""._PROFILE_SV_EDITLINK_FORM."\">"._PROFILE_SV_EDITLINK_FORM."</a>\n";
 echo "</div>\n";
 echo "</div></div></body></html>\n";
-?>

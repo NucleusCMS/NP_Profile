@@ -58,4 +58,3 @@ class NP_ProfileLogger extends NucleusPlugin {
 	}
 
 }
-?>
