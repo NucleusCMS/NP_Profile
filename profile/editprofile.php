@@ -59,7 +59,7 @@ if (isset($plugin)) {
         $res = sql_query("SELECT fname FROM ".sql_table('plugin_profile_fields')." WHERE enabled=1");
         $lines = array('[t]','[t1]'.ucfirst(_PROFILE_PROFILE),'[/t]','[1]');
         $i = 4;
-        while ($value = mysql_fetch_assoc($res)) {
+        while ($value = sql_fetch_assoc($res)) {
             $lines[$i] = $value['fname'];
             $i++;
         }

@@ -179,7 +179,7 @@ border-bottom: 1px solid #778;
 		echo '<table border="0" cellpadding="3" width="600">'."\n";
 		echo "<tr class=\"h\">\n";
 		echo "<th>".ucfirst(_PROFILE_FIELD)."</th><th>".ucfirst(_PROFILE_LABEL)."</th><th>".ucfirst(_PROFILE_TYPE)."</th><th>".ucfirst(_PROFILE_REQUIRED)."</th><th>".ucfirst(_PROFILE_ENABLED)."</th><th>".ucfirst(_PROFILE_ACTIONS)."</th></tr>\n";
-		while ($row = mysql_fetch_assoc($fieldres)) {
+		while ($row = sql_fetch_assoc($fieldres)) {
 			echo "<tr>\n";
 			echo '<td class="e">'.$row['fname']."</td>\n";
 			echo '<td class="v">'.$row['flabel']."</td>\n";
@@ -206,7 +206,7 @@ border-bottom: 1px solid #778;
 		$fname = requestVar('fname');
 		if ($profplug->fieldExists($fname)) {
 			$fieldres = $profplug->getFieldDef($fname);
-			$row = mysql_fetch_assoc($fieldres);
+			$row = sql_fetch_assoc($fieldres);
 			$ofname = $fname;
 			$acttype = 'updatefield';
 		}
@@ -374,7 +374,7 @@ border-bottom: 1px solid #778;
 		echo "<th>".ucfirst(_PROFILE_TYPE)."</th><th>".ucfirst(_PROFILE_LENGTH)."</th><th>".ucfirst(_PROFILE_SIZE)."</th><th>".ucfirst(_PROFILE_FORMAT)."</th>";
 		echo "<th>".ucfirst(_PROFILE_WIDTH)."</th><th>".ucfirst(_PROFILE_HEIGHT)."</th><th>".ucfirst(_PROFILE_FILESIZE)."</th><th>".ucfirst(_PROFILE_FILETYPES)."</th>";
 		echo "<th>".ucfirst(_PROFILE_OPTIONS)."</th><th>".ucfirst(_PROFILE_ACTIONS)."</th></tr>\n";
-		while ($row = mysql_fetch_assoc($typeres)) {
+		while ($row = sql_fetch_assoc($typeres)) {
 			echo "<tr>\n";
 			echo '<td class="e">'.$row['type']."</td>\n";
 			echo '<td class="v">'.$row['flength']."</td>\n";
@@ -401,7 +401,7 @@ border-bottom: 1px solid #778;
 		$dtype = requestVar('dtype');
 		if ($profplug->typeExists($dtype)) {
 			$typeres = $profplug->getTypeDef($dtype);
-			$row = mysql_fetch_assoc($typeres);
+			$row = sql_fetch_assoc($typeres);
 			$odtype = $dtype;
 			$acttype = 'updatetype';
 
@@ -494,7 +494,7 @@ border-bottom: 1px solid #778;
 		echo "<tr class=\"h\">\n";
 		echo "<th>".ucfirst(_PROFILE_TEMPLATE)."</th><th>".ucfirst(_PROFILE_TYPE)."</th><th>".ucfirst(_PROFILE_BODY)."</th>";
 		echo "<th>".ucfirst(_PROFILE_ACTIONS)."</th></tr>\n";
-		while ($row = mysql_fetch_assoc($templateres)) {
+		while ($row = sql_fetch_assoc($templateres)) {
 			echo "<tr>\n";
 			echo '<td class="e">'.$row['tname']."</td>\n";
 			echo '<td class="v">'.$row['ttype']."</td>\n";
@@ -517,7 +517,7 @@ border-bottom: 1px solid #778;
 		$tname = requestVar('tname');
 		if ($profplug->templateExists($tname)) {
 			$templateres = $profplug->getTemplateDef($tname);
-			$row = mysql_fetch_assoc($templateres);
+			$row = sql_fetch_assoc($templateres);
 			$otname = $tname;
 			$acttype = 'updatetemplate';
 		}
